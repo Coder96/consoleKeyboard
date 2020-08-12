@@ -1,12 +1,17 @@
 $fn=30;
 
 
-//plate2x1();
-//translate([0,-50,0])  plate2x2();
+
+plate2x1();
+translate([0,-50,0])  plate2x2();
 translate([0,-100,0]) plate2x3();
-//translate([0,-150,0]) plateBase();
-//translate([0,-200,0]) plate2x5();
-//translate([0,-250,0]) plate2x6();
+translate([0,-150,0]) plateBase();
+translate([0,-200,0]) plate2x5();
+translate([0,-250,0]) plate2x6();
+
+translate([-100,0,0])  plate3x1();
+translate([-100,-100,0])  plate3x3();
+translate([-100,-150,0])  plate3x4();
 
 module plate2x1(){
 	
@@ -86,5 +91,29 @@ module plateBaseCutTabs(){
 		plateBase();
 		color("green") translate([48.5,0,0]) cube([10,20,10],center=true);
 		color("green") translate([-48.5,0,0]) cube([10,20,10],center=true);
+	}
+}
+
+module plate3x1(){
+	plate2x1();
+	translate([0,-20,0]) plate2x1();
+
+}
+module plate3x3(){
+	intersection() {
+		union(){
+			plate2x3();
+			translate([0,-20,0]) plate2x3();
+		}
+		cube([100,100, 10],center=true);
+	}
+}
+module plate3x4(){
+	intersection() {
+		union(){
+			plate2x4();
+			translate([0,-20,0]) plate2x4();
+		}
+		cube([100,150, 10],center=true);
 	}
 }
