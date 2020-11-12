@@ -1,17 +1,30 @@
 $fn=30;
 
 
+//plate3x4();
+ plate2x8();
+//cutPlate2x4();
 
-plate2x1();
-translate([0,-50,0])  plate2x2();
-translate([0,-100,0]) plate2x3();
-translate([0,-150,0]) plateBase();
-translate([0,-200,0]) plate2x5();
-translate([0,-250,0]) plate2x6();
 
-translate([-100,0,0])  plate3x1();
-translate([-100,-100,0])  plate3x3();
-translate([-100,-150,0])  plate3x4();
+//all();
+
+
+module all(){
+	plate2x1();
+	translate([0,-50,0])  plate2x2();
+	translate([0,-100,0]) plate2x3();
+	translate([0,-150,0]) plateBase();
+	translate([0,-200,0]) plate2x5();
+	translate([0,-250,0]) plate2x6();
+//	translate([0,-300,0]) plate2x7();
+	translate([0,-350,0]) plate2x8();
+	translate([0,-400,0]) plate2x9();
+	translate([0,-450,0]) plate2x10();
+
+	translate([-100,0,0])  plate3x1();
+	translate([-100,-100,0]) plate3x3();
+	translate([-100,-150,0]) plate3x4();
+}
 
 module plate2x1(){
 	
@@ -51,6 +64,26 @@ module plate2x6(){
 	
 }
 
+module plate2x8(){
+	plateBaseCutTabs();
+	translate([-41,0,0]) cutPlate2x3();
+	translate([41,0,0]) rotate([0,0,180]) cutPlate2x3();
+	
+}
+
+module plate2x9(){
+	plateBaseCutTabs();
+	translate([-42,0,0]) cutPlate2x4();
+	translate([61,0,0]) rotate([0,0,180]) cutPlate2x4();	
+}
+
+module plate2x10(){
+	plateBaseCutTabs();
+	translate([-62,0,0]) cutPlate2x4();
+	translate([61,0,0]) rotate([0,0,180]) cutPlate2x4();
+	
+}
+
 module cutPlate2x1(){
 
 	difference(){
@@ -75,6 +108,14 @@ module cutPlate2x3(){
 	}
 }
 
+module cutPlate2x4(){
+
+	difference(){
+		plateBase();
+		translate([45,0,0]) color("green") cube([12,60,10],center=true);
+	}
+}
+
 module plateBase(){
 	translate([0,22.5,0]) import("stream-cheap-faceplate-reinforced.stl");
 }
@@ -95,15 +136,22 @@ module plateBaseCutTabs(){
 }
 
 module plate3x1(){
-	plate2x1();
-	translate([0,-20,0]) plate2x1();
-
+	difference(){
+		plate2x1();
+		translate([-22,-20,0]) cube([5,5,10],center=true);
+		translate([-42,-20,0]) cube([5,5,10],center=true);
+	}
+	difference(){
+		translate([0,-20,0]) plate2x1();
+		translate([-22,0,0]) cube([5,5,10],center=true);
+		translate([-42,0,0]) cube([5,5,10],center=true);
+	}
 }
 module plate3x3(){
 	intersection() {
 		union(){
 			plate2x3();
-			translate([0,-20,0]) plate2x3();
+			translate([0,-21,0]) plate2x3();
 		}
 		cube([100,100, 10],center=true);
 	}
@@ -112,7 +160,7 @@ module plate3x4(){
 	intersection() {
 		union(){
 			plate2x4();
-			translate([0,-20,0]) plate2x4();
+			translate([0,-21,0]) plate2x4();
 		}
 		cube([100,150, 10],center=true);
 	}
