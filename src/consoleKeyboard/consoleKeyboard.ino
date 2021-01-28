@@ -21,6 +21,7 @@ byte colPins[COLS] = {5,6}; //connect to the column pinouts of the keypad
 
 Keypad keypad = Keypad( makeKeymap(keys), rowPins, colPins, ROWS, COLS );
 
+
 void setup(){
   Serial.begin(9600);
   Joystick.begin();
@@ -106,4 +107,3 @@ void joyButtontoggle(int buttonId){
   delay(50);
   Joystick.releaseButton(buttonId);
 }
-
