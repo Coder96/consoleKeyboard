@@ -1,12 +1,13 @@
 $fn=30;
 
 
-//plate3x4();
- plate2x8();
+//plate2x4();
+//plate2x8();
 //cutPlate2x4();
-
-
+//plate5x4();
+plate_ConsoleNumpad5x4_2x4();
 //all();
+
 
 
 module all(){
@@ -164,4 +165,48 @@ module plate3x4(){
 		}
 		cube([100,150, 10],center=true);
 	}
+}
+module plate5x4(){
+	intersection() {
+		union(){
+			plate3x4();//color("green")
+			translate([0,-42,0]) plate3x4();
+		}
+		cube([100,250, 10],center=true);
+	}
+}
+module plate_ConsoleNumpad5x4_2x4(){
+  color("green") import("cover5x4.stl");
+  translate([0,-120,0]) color("green") import("cover2x4.stl");
+  color("green") translate([0,-114,0]){
+    translate([0,0,.5]) cube([87,22,1], center=true);
+    translate([0,0,.77]) cube([87,22,1], center=true);
+  }
+  translate([0,-114,0])
+    rotate([0,0,90])
+    trangleSupport(30);
+
+  translate([21,-114,0])
+    rotate([0,0,90])
+    trangleSupport(30);
+
+  translate([-21,-114,0])
+    rotate([0,0,90])
+    trangleSupport(30);
+
+  translate([0,-106.5,0])
+    trangleSupport(80);
+
+  translate([0,-121.5,0])
+    trangleSupport(80);
+
+}
+module trangleSupport(iLen){
+  difference(){
+    translate([0,0,1.06])
+      rotate([45,0,0])
+      cube([iLen,3,3],center=true);
+    translate([0,0,-.5])
+      cube([iLen+1,6,3], center=true);
+  }
 }

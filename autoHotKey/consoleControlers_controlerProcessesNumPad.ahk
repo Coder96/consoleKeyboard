@@ -1,0 +1,135 @@
+;
+; This is ment to be included in the findApps_m.ahk program
+;
+
+myDoNothingNumPad:
+  return
+;
+myNumPadJoy1:
+	processButton(controlerNumPad,1)
+	return
+;
+myNumPadJoy2:
+	processButton(controlerNumPad,2)
+	return
+;
+myNumPadJoy3:
+	processButton(controlerNumPad,3)
+	return
+;
+myNumPadJoy4:
+	processButton(controlerNumPad,4)
+	return
+;
+myNumPadJoy5:
+	processButton(controlerNumPad,5)
+	return
+;
+myNumPadJoy6:
+	processButton(controlerNumPad,6)
+	return
+;
+myNumPadJoy7:
+	processButton(controlerNumPad,7)
+	return
+;
+myNumPadJoy8:
+	processButton(controlerNumPad,8)
+	return
+;
+myNumPadJoy9:
+	processButton(controlerNumPad,9)
+	return
+;
+myNumPadJoy10:
+	processButton(controlerNumPad,10)
+	return
+;
+myNumPadJoy11:
+	processButton(controlerNumPad,11)
+	return
+;
+myNumPadJoy12:
+	processButton(controlerNumPad,12)
+	return
+;
+myNumPadJoy13:
+	processButton(controlerNumPad,13)
+	return
+;
+myNumPadJoy14:
+	processButton(controlerNumPad,14)
+	return
+;
+myNumPadJoy15:
+	processButton(controlerNumPad,15)
+	return
+;
+myNumPadJoy16:
+	processButton(controlerNumPad,16)
+	return
+;
+myNumPadJoy17:
+	processButton(controlerNumPad,17)
+	return
+;
+myNumPadJoy18:
+	processButton(controlerNumPad,18)
+	return
+;
+myNumPadJoy19:
+	processButton(controlerNumPad,19)
+	return
+;
+myNumPadJoy20:
+	processButton(controlerNumPad,20)
+	return
+;
+myNumPadJoy21:
+	processButton(controlerNumPad,21)
+	return
+;
+myNumPadJoy22:
+	processButton(controlerNumPad,22)
+	return
+;
+myNumPadJoy23:
+	processButton(controlerNumPad,23)
+	return
+;
+myNumPadJoy24:
+	processButton(controlerNumPad,24)
+	return
+;
+myNumPadJoy25:
+	processButton(controlerNumPad,25)
+	return
+;
+myNumPadJoy26:
+	processButton(controlerNumPad,26)
+	return
+;
+myNumPadJoy27:
+	processButton(controlerNumPad,27)
+	return
+;
+myNumPadJoy28:
+	processButton(controlerNumPad,28)
+	return
+;
+myNumPadJoy29:
+	processButton(controlerNumPad,29)
+	return
+;
+myNumPadJoy30:
+	processButton(controlerNumPad,30)
+	return
+;
+myNumPadJoy31:
+	processButton(controlerNumPad,31)
+	return
+;
+myNumPadJoy32:
+	processButton(controlerNumPad,32)
+	return
+;

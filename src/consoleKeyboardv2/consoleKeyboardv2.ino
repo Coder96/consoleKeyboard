@@ -1,23 +1,11 @@
                                                                                                          
 #include "Joystick.h"
 #include <Keypad.h>
+// When there are 2 Rows
 
-const byte ROWS = 10; //four rows
-const byte COLS = 3; //three columns
-char keys[ROWS][COLS] = {
-  {'0','1','2'},
-  {'3','4','5'},
-  {'6','7','8'},
-  {'9','A','B'},
-  {'C','D','E'},
-  {'F','G','H'},
-  {'I','J','K'},
-  {'L','M','N'},
-  {'O','P','Q'},
-  {'R','S','T'},
-};
-byte rowPins[ROWS] = {7,8,9,10,16,14,15,18,19,20}; //connect to the row pinouts of the keypad
-byte colPins[COLS] = {4,5,6}; //connect to the column pinouts of the keypad
+//#include "keypad_2x10.h"
+//#include "keypad_3x10.h"
+#include "keypad_2x5_4x5.h"
 
 Keypad keypad = Keypad( makeKeymap(keys), rowPins, colPins, ROWS, COLS );
 

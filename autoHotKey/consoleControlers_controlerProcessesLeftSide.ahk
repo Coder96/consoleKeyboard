@@ -1,0 +1,135 @@
+;
+; This is ment to be included in the findApps_m.ahk program
+;
+
+myDoNothingLeftSide:
+  return
+;
+myLeftSideJoy1:
+	processButton(controlerLeftSide,1)
+	return
+;
+myLeftSideJoy2:
+	processButton(controlerLeftSide,2)
+	return
+;
+myLeftSideJoy3:
+	processButton(controlerLeftSide,3)
+	return
+;
+myLeftSideJoy4:
+	processButton(controlerLeftSide,4)
+	return
+;
+myLeftSideJoy5:
+	processButton(controlerLeftSide,5)
+	return
+;
+myLeftSideJoy6:
+	processButton(controlerLeftSide,6)
+	return
+;
+myLeftSideJoy7:
+	processButton(controlerLeftSide,7)
+	return
+;
+myLeftSideJoy8:
+	processButton(controlerLeftSide,8)
+	return
+;
+myLeftSideJoy9:
+	processButton(controlerLeftSide,9)
+	return
+;
+myLeftSideJoy10:
+	processButton(controlerLeftSide,10)
+	return
+;
+myLeftSideJoy11:
+	processButton(controlerLeftSide,11)
+	return
+;
+myLeftSideJoy12:
+	processButton(controlerLeftSide,12)
+	return
+;
+myLeftSideJoy13:
+	processButton(controlerLeftSide,13)
+	return
+;
+myLeftSideJoy14:
+	processButton(controlerLeftSide,14)
+	return
+;
+myLeftSideJoy15:
+	processButton(controlerLeftSide,15)
+	return
+;
+myLeftSideJoy16:
+	processButton(controlerLeftSide,16)
+	return
+;
+myLeftSideJoy17:
+	processButton(controlerLeftSide,17)
+	return
+;
+myLeftSideJoy18:
+	processButton(controlerLeftSide,18)
+	return
+;
+myLeftSideJoy19:
+	processButton(controlerLeftSide,19)
+	return
+;
+myLeftSideJoy20:
+	processButton(controlerLeftSide,20)
+	return
+;
+myLeftSideJoy21:
+	processButton(controlerLeftSide,21)
+	return
+;
+myLeftSideJoy22:
+	processButton(controlerLeftSide,22)
+	return
+;
+myLeftSideJoy23:
+	processButton(controlerLeftSide,23)
+	return
+;
+myLeftSideJoy24:
+	processButton(controlerLeftSide,24)
+	return
+;
+myLeftSideJoy25:
+	processButton(controlerLeftSide,25)
+	return
+;
+myLeftSideJoy26:
+	processButton(controlerLeftSide,26)
+	return
+;
+myLeftSideJoy27:
+	processButton(controlerLeftSide,27)
+	return
+;
+myLeftSideJoy28:
+	processButton(controlerLeftSide,28)
+	return
+;
+myLeftSideJoy29:
+	processButton(controlerLeftSide,29)
+	return
+;
+myLeftSideJoy30:
+	processButton(controlerLeftSide,30)
+	return
+;
+myLeftSideJoy31:
+	processButton(controlerLeftSide,31)
+	return
+;
+myLeftSideJoy32:
+	processButton(controlerLeftSide,32)
+	return
+;
