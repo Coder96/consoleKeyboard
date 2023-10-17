@@ -5,10 +5,12 @@ $fn=30;
 //plate2x8();
 //cutPlate2x4();
 //plate5x4();
-plate_ConsoleNumpad5x4_2x4();
+//plate_ConsoleNumpad5x4_2x4();
 //all();
+use <grid.scad>
 
-
+//#grid_make(3,2);
+//translate([36.5,-16.5,0]) plate2x3();
 
 module all(){
 	plate2x1();
@@ -16,15 +18,28 @@ module all(){
 	translate([0,-100,0]) plate2x3();
 	translate([0,-150,0]) plateBase();
 	translate([0,-200,0]) plate2x5();
-	translate([0,-250,0]) plate2x6();
-//	translate([0,-300,0]) plate2x7();
-	translate([0,-350,0]) plate2x8();
-	translate([0,-400,0]) plate2x9();
-	translate([0,-450,0]) plate2x10();
+	translate([21,-250,0]) plate2x6();
+	translate([21,-300,0]) plate2x7();
+	translate([42,-350,0]) plate2x8();
+	translate([42,-400,0]) plate2x9();
+	translate([63,-450,0]) plate2x10();
 
-	translate([-100,0,0])  plate3x1();
-	translate([-100,-100,0]) plate3x3();
-	translate([-100,-150,0]) plate3x4();
+	translate([-42,0,0])  plate3x1();
+	translate([-84,-100,0]) plate3x3();
+	translate([-105,-150,0]) plate3x4();
+}
+
+
+module testGrid(){
+  cube([14,1000,5],center=true);
+  for(a=[1:1:5]){
+    translate([a*21,0,0])
+      cube([14,1000,5],center=true);
+  }
+  for(a=[1:1:5]){
+    translate([a*-21,0,0])
+      cube([14,1000,5],center=true);
+  }
 }
 
 module plate2x1(){
@@ -47,7 +62,7 @@ module plate2x3(){
 
 module plate2x4(){
 	//cutPlate2x2();
-	import("stream-cheap-faceplate-reinforced.stl");
+	import("../3DParts/stream-cheap-faceplate-reinforced.stl");
 	
 }
 
@@ -65,23 +80,30 @@ module plate2x6(){
 	
 }
 
+module plate2x7(){
+	plateBaseCutTabs();
+	translate([-21,0,0]) cutPlate2x3();
+	translate([42,0,0]) rotate([0,0,180]) cutPlate2x3();
+	
+}
+
 module plate2x8(){
 	plateBaseCutTabs();
-	translate([-41,0,0]) cutPlate2x3();
-	translate([41,0,0]) rotate([0,0,180]) cutPlate2x3();
+	translate([-42,0,0]) cutPlate2x3();
+	translate([42,0,0]) rotate([0,0,180]) cutPlate2x3();
 	
 }
 
 module plate2x9(){
 	plateBaseCutTabs();
 	translate([-42,0,0]) cutPlate2x4();
-	translate([61,0,0]) rotate([0,0,180]) cutPlate2x4();	
+	translate([63,0,0]) rotate([0,0,180]) cutPlate2x4();	
 }
 
 module plate2x10(){
 	plateBaseCutTabs();
-	translate([-62,0,0]) cutPlate2x4();
-	translate([61,0,0]) rotate([0,0,180]) cutPlate2x4();
+	translate([-63,0,0]) cutPlate2x4();
+	translate([63,0,0]) rotate([0,0,180]) cutPlate2x4();
 	
 }
 
@@ -118,7 +140,7 @@ module cutPlate2x4(){
 }
 
 module plateBase(){
-	translate([0,22.5,0]) import("stream-cheap-faceplate-reinforced.stl");
+	translate([0,22.5,0]) import("../3DParts/stream-cheap-faceplate-reinforced.stl");
 }
 
 module plateBaseCutTab(){
@@ -176,8 +198,8 @@ module plate5x4(){
 	}
 }
 module plate_ConsoleNumpad5x4_2x4(){
-  color("green") import("cover5x4.stl");
-  translate([0,-120,0]) color("green") import("cover2x4.stl");
+#  color("green") import("../3DParts/cover5x4.stl");
+  translate([0,-120,0]) color("green") import("../3DParts/cover2x4.stl");
   color("green") translate([0,-114,0]){
     translate([0,0,.5]) cube([87,22,1], center=true);
     translate([0,0,.77]) cube([87,22,1], center=true);
